@@ -316,32 +316,7 @@ curl -X POST http://localhost:8080/api/orders \
 }'
 
 # For Windows users (using double quotes for JSON):
-curl -X POST http://localhost:8080/api/orders ^
--H "Content-Type: application/json" ^
--d "{
-  \"items\": [
-    {
-      \"type\": \"PHYSICAL\",
-      \"productName\": \"Laptop\",
-      \"price\": 10000,
-      \"quantity\": 2,
-      \"shippingWeight\": 1.5
-    },
-    {
-      \"type\": \"DIGITAL\",
-      \"productName\": \"E-book\",
-      \"price\": 15000,
-      \"quantity\": 1
-    },
-    {
-      \"type\": \"GIFT_CARD\",
-      \"productName\": \"Gift Card\",
-      \"price\": 25000,
-      \"quantity\": 1,
-      \"recipientEmail\": \"recipient@example.com\"
-    }
-  ]
-}"
+curl -X POST http://localhost:8080/api/orders -H "Content-Type: application/json" -d "{\"items\": [{\"type\": \"PHYSICAL\",\"productName\": \"Laptop\",\"price\": 10000,\"quantity\": 2,\"shippingWeight\": 1.5},{\"type\": \"DIGITAL\",\"productName\": \"E-book\",\"price\": 15000,\"quantity\": 1},{\"type\": \"GIFT_CARD\",\"productName\": \"Gift Card\",\"price\": 25000,\"quantity\": 1,\"recipientEmail\": \"recipient@example.com\"}]}"
 ```
 
 Retrieve an order:
