@@ -332,7 +332,7 @@ curl http://localhost:8080/api/orders/1
 ## Project Structure
 ```
 src/main/java/com/ecommerce/
-├── EcommerceApplication.java
+├── InterviewApplication.java
 ├── model/
 │   ├── OrderItem.java
 │   ├── PhysicalProduct.java
