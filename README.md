@@ -148,12 +148,15 @@ cd ecommerce-order
 
 2. Build the project:
 ```bash
-./mvnw clean install
+./mvnw clean install  # For Linux/Mac users
+mvnw.cmd clean install  # For Windows users
 ```
 
 3. Run the application:
 ```bash
-./mvnw spring-boot:run
+./mvnw spring-boot:run  # For Linux/Mac users
+mvnw.cmd spring-boot:run  # For Windows users
+
 ```
 
 ## Testing Instructions
@@ -284,6 +287,7 @@ cd ecommerce-order
 
 Create an order:
 ```bash
+# For Linux/Mac users:
 curl -X POST http://localhost:8080/api/orders \
 -H "Content-Type: application/json" \
 -d '{
@@ -310,6 +314,34 @@ curl -X POST http://localhost:8080/api/orders \
     }
   ]
 }'
+
+# For Windows users (using double quotes for JSON):
+curl -X POST http://localhost:8080/api/orders ^
+-H "Content-Type: application/json" ^
+-d "{
+  \"items\": [
+    {
+      \"type\": \"PHYSICAL\",
+      \"productName\": \"Laptop\",
+      \"price\": 10000,
+      \"quantity\": 2,
+      \"shippingWeight\": 1.5
+    },
+    {
+      \"type\": \"DIGITAL\",
+      \"productName\": \"E-book\",
+      \"price\": 15000,
+      \"quantity\": 1
+    },
+    {
+      \"type\": \"GIFT_CARD\",
+      \"productName\": \"Gift Card\",
+      \"price\": 25000,
+      \"quantity\": 1,
+      \"recipientEmail\": \"recipient@example.com\"
+    }
+  ]
+}"
 ```
 
 Retrieve an order:
