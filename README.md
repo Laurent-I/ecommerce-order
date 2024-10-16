@@ -143,7 +143,7 @@ A Spring Boot application that demonstrates object-oriented design principles in
 1. Clone the repository:
 ```bash
 git clone [repository-url]
-cd ecommerce-order-processing
+cd ecommerce-order
 ```
 
 2. Build the project:
